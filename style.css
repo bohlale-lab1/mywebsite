@@ -5,14 +5,14 @@ body {
     margin: 0;
     padding: 20px;
     background: linear-gradient(135deg, #e3f2fd, #bbdefb);
-    color: #333;
+    color: #128;
 }
 
 /* Container */
 .container {
     max-width: 800px;
     margin: auto;
-    background: #fff;
+    background: #FFFF00;
     padding: 20px;
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
@@ -44,12 +44,12 @@ section {
     margin-bottom: 20px;
     padding: 15px;
     border-left: 5px solid #ff9800; /* Orange */
-    background: rgba(255, 152, 0, 0.1);
+    background: rgba(0, 255, 0, 0.1);
     transition: background 0.3s;
 }
 
 section:hover {
-    background: rgba(255, 152, 0, 0.2);
+    background: rgba(0, 255, 0, 0.2);
 }
 
 /* List Styles */
