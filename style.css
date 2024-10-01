@@ -99,3 +99,32 @@ button:hover {
         padding: 15px;
     }
 }
+.container {
+    width: 100vw;
+    height: 100vh;
+    background-color: #f1c40f;
+    position: relative;
+}
+
+.container::before {
+    content: '';
+    width: 200px;
+    height: 200px;
+    background-color: #2ecc71;
+    border-radius: 50%;
+    position: absolute;
+    top: 100px;
+    left: 200px;
+}
+
+.container::after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-bottom: 200px solid #3498db;
+    position: absolute;
+    top: 300px;
+    left: 400px;
+}
