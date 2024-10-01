@@ -99,14 +99,14 @@ button:hover {
         padding: 15px;
     }
 }
-.container {
+container {
     width: 100vw;
     height: 100vh;
     background-color: #f1c40f;
     position: relative;
 }
 
-.container::before {
+container::before {
     content: '';
     width: 200px;
     height: 200px;
@@ -117,7 +117,7 @@ button:hover {
     left: 200px;
 }
 
-.container::after {
+container::after {
     content: '';
     width: 0;
     height: 0;
