@@ -1,9 +1,9 @@
 /* General Styles */
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #e8f0f2; /* Light background for better contrast */
+    background-color: #f4f9f9; /* Soft background */
     color: #333;
     overflow: hidden;
 }
@@ -11,23 +11,29 @@ body {
 /* Heading Styles */
 h2, h3, h4 {
     color: #2c3e50;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 /* Section Styles */
 section {
     background: rgba(255, 255, 255, 0.9);
-    border-radius: 15px;
-    padding: 30px;
-    margin: 20px auto;
+    border-radius: 20px;
+    padding: 40px;
+    margin: 30px auto;
     max-width: 800px;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
     position: relative;
     z-index: 1;
+    transition: transform 0.3s;
+}
+
+section:hover {
+    transform: translateY(-5px);
 }
 
 /* Heading Decoration */
 h2 {
-    font-size: 28px;
+    font-size: 32px;
     margin-bottom: 10px;
     position: relative;
 }
@@ -36,22 +42,22 @@ h2::after {
     content: '';
     position: absolute;
     left: 0;
-    bottom: -5px;
+    bottom: -8px;
     height: 4px;
-    width: 100%;
+    width: 60%;
     background: linear-gradient(90deg, #ff6b6b, #f7d94b);
+    border-radius: 10px;
 }
 
 /* Background Shapes */
 body::before {
     content: '';
     position: absolute;
-    top: 10%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 250px;
-    height: 250px;
-    background: radial-gradient(circle, rgba(255, 102, 102, 0.2), transparent);
+    top: 20%;
+    left: 10%;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(255, 102, 102, 0.1), transparent);
     border-radius: 50%;
     z-index: 0;
 }
@@ -60,12 +66,26 @@ body::after {
     content: '';
     position: absolute;
     bottom: -150px;
-    right: -150px;
-    width: 300px;
-    height: 300px;
-    background: linear-gradient(135deg, rgba(255, 102, 102, 0.1), rgba(255, 204, 0, 0.1));
+    right: -200px;
+    width: 400px;
+    height: 400px;
+    background: linear-gradient(135deg, rgba(255, 204, 0, 0.1), rgba(0, 204, 255, 0.1));
     border-radius: 50%;
     z-index: 0;
+}
+
+/* Card Styles */
+.card {
+    background: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 15px 0;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-3px);
 }
 
 /* Link Styles */
@@ -84,13 +104,16 @@ a:hover {
     display: inline-block;
     background-color: #ff6b6b;
     color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
+    padding: 12px 25px;
+    border-radius: 30px;
     text-align: center;
     text-decoration: none;
-    transition: background-color 0.3s;
+    font-weight: bold;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.2s;
 }
 
 .button:hover {
     background-color: #f7d94b;
+    transform: scale(1.05);
 }
