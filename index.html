@@ -72,3 +72,70 @@
 <h2>Contacts</h2>
 <h4>phone number : 0720580982 </h4>
 </section> 
+
+
+</head>
+<body>
+
+    <section>
+        <h2>Contact Me</h2>
+        <form action="send_email.php" method="POST">
+
+
+            
+            <section>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            </section>
+
+
+            <section>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            </section>
+
+
+            <section>
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+            </section>
+
+
+            <section>
+            <label for="comment">Comment:</label>
+            <textarea id="comment" name="comment" required></textarea>
+            </section>
+
+            
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+
+    <section>
+<a href="index.html">Home</a>
+</section>
+
+
+    
+  <?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $name = htmlspecialchars($_POST['name']);
+    $email = htmlspecialchars($_POST['email']);
+    $phone = htmlspecialchars($_POST['phone']);
+    $comment = htmlspecialchars($_POST['comment']);
+
+    $to = "ramolotoc@gmail.com";
+    $subject = "New Comment from $name";
+    $message = "Name: $name\nEmail: $email\nPhone: $phone\nComment: $comment";
+    $headers = "From: $email";
+
+    if (mail($to, $subject, $message, $headers)) {
+        echo "Message sent successfully!";
+    } else {
+        echo "Failed to send message.";
+    }
+} else {
+    echo "Invalid request.";
+}
+?>
